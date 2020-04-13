@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(221, 165, 216);
+}
+
+li, a {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #bee06f;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: rgb(39, 139, 216);
+    height: 90px;
+}
+
+.logo {
+    width: 89px;
+    height: auto;
+    cursor: pointer;
+}
+.nav-links {
+    list-style: none;
+     background-color: rgb(39, 139, 216);
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+     background-color: rgb(39, 139, 216);
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+     background-color: rgb(39, 139, 216);
+}
+.nav-links li a:hover {
+     color: rgb(230, 164, 230);
+     font-style: italic;
+}
+body {
+    height: 800px;
+    width: auto;
+    background-image: element(logo2.png);
+}
+/* body{
+    background-color:rgba(160, 57, 57, 0.849);
+    background-image:url(https://townsquare.media/site/366/files/2015/08/Apocalypse1-630x420.jpg?w=980&q=75);
+    background-position: center;
+    background-size:cover;
+    background-blend-mode:soft-light;
+    width:600px;
+    height:300px;
+    margin:auto;
+    /* position:absolute; */
+    top:0px; bottom:0px; right:0px; left:0px;
+  }
+  */
