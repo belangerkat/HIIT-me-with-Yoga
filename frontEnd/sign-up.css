@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 241, 246);
+}
+
+/* .nav-links a {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #bee06f;
+    text-decoration: none;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color:  #1A253F;
+    height: 90px;
+}
+
+.logo {
+    width: 89px;
+    height: auto;
+    cursor: pointer;
+}
+input, form {
+    display: inline-block;
+
+    background-color: rgb(247, 241, 246);
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 1%;
+    width: auto;
+    height: auto;
+    padding: 12px 10px;
+}
+input {
+    border: 2px solid #1A253F;
+    border-radius: 10px;
+    box-shadow: 0px 5px 25px rgb(42, 64, 112);
+}

@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nav Bar</title>
+    <title>HIIT Me With Yoga</title>
     <script defer src='app.js'></script>
     <link rel="stylesheet" href="style.css"/>
     <header>
-        <img class="logo" src='images/logo2.png'>
+        <img class="logo" src='images/logo3.png' onclick="location.href ='index.html';">
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Signup</a></li>
+                <li><a class='sign-up' href="sign-up.html">SIGN UP</a></li>
                 <li>
                     <form class='login'>
                         <input name="username" type="text" placeholder="Username"/>
                         <input name="password" type="password" placeholder="Password"/>
-                        <input type="submit" placeholder="Login"/>
+                        <input type="submit" value="LOGIN"/>
                     </form>
                 </li>
-                <li><a href="#">Explore Poses</a></li>
+                <li><a class='create' href="#">CREATE</a></li>
             </ul>
         </nav>
     </header>
 </head>
 <body>
+    <div class="section">
+        <h1 class='intro'>HIIT ME WITH YOGA</h1>
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="video.mp4" type="video/mp4">
+            </video>
+        </div>      
+    </div>
+    <ul class="workout-options">
+        <li>
+            <a class='yoga' href='yoga-flows.html'>YOGA</a>
+            <img class="yoga-image" src="https://specials-images.forbesimg.com/imageserve/1067864612/960x0.jpg?fit=scale">
+        </li>
+        <li>
+            <a class='hiit' href='hiit-exercises.html'>HIIT</a>
+            <img class="yoga-image" src="https://lmimirror3pvr.azureedge.net/static/media/12419/f550bcca-c76d-420c-999f-d6ba1fa41b46/hiit_960x540-v2.jpg">
+        </li>
+    </ul>
     
-    <p1>Yoga Picture</p1>
 </body>
 </html>
