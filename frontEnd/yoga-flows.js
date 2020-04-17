@@ -10,27 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(result => renderFlows(result))
 
     function renderFlows(user) {
+        const banner = document.querySelector('.banner')
         console.log(user)
         let flowArray = user.yoga_flows
         console.log(flowArray)
         flowArray.forEach(flow => {
-            const user_flow = document.createElement('ul')
-            user_flow.className = 'user-flow'
-            const flowName = document.createElement('li')
+            const userFlow = document.querySelector('.banner-head')
+            // const userFlow = document.createElement('div')
+            // userFlow.className = 'user-flow'
+            const flowName = document.createElement('h1')
             flowName.innerHTML = `<a href='flow.html?id=${flow.id}'>${flow.name}</a>`
-    
-            // fetch(`http://localhost:3000/yoga_flows/${flowId}`)
-            // .then(response => response.json())
-            // .then(console.log)
-            user_flow.appendChild(flowName)
-            document.body.appendChild(user_flow)
+            userFlow.appendChild(flowName)
         })
-        const createFlowForm = document.createElement('a')
-        createFlowForm.innerText = "CREATE A NEW YOGA FLOW"
-        createFlowForm.href = "new-flow.html"
-        document.body.appendChild(createFlowForm)
-
-        
-
     }
 })

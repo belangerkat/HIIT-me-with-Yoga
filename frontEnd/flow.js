@@ -14,16 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(result => renderPoses(result))
 
     function renderPoses(poses) {
-        const poseCards = document.createElement('ul')
-        poseCards.className = 'pose-cards'
-        const directions = document.createElement('li')
+        const dataUl = document.querySelector('#data-ul')
+        const poseCards = document.querySelector('.pose-cards')
+        const directions = document.createElement('h1')
         directions.innerText = "CLICK POSES TO ADD THEM TO YOUR FLOW"
+        poseCards.append(directions)
         poses.forEach(pose => {
-            const poseCard = document.createElement('li')
-            poseCard.className = 'card'
+            const poseCard = document.createElement('ul')
             const image = document.createElement('img')
-            image.className = 'pose-image'
+            const name = document.createElement('div')
+            const description = document.createElement('p')
             const poseId = pose.id
+            image.className = 'pose-image'
+            image.src = pose.image
+            name.innerText = pose.name
+            description.innerText = pose.description
+            poseCard.append(image, name, description)
+            poseCards.append(poseCard)
             poseCard.addEventListener('click', (event) => {
                 console.log(localStorage.id)
                 console.log(id)
@@ -42,13 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     body: JSON.stringify(flowPose)
                 }).then(location.reload())
             })
-            const name = document.createElement('div')
-            name.innerText = pose.name
-            image.src = pose.image
             poseCard.append(image, name)
             poseCards.appendChild(poseCard)
         })
-        document.body.append(directions, poseCards)
+        dataUl.append(poseCards)
     }
 
     fetch(`http://localhost:3000/yoga_flows/${id}`)
@@ -58,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getFlowPoses(yogaFlow) {
         const flowUl = document.querySelector('#flow-ul')
-        const name = document.createElement('li')
+        const name = document.createElement('h1')
         name.innerText = yogaFlow.name
         let flowPoseArray = yogaFlow.flow_poses
         console.log(flowPoseArray)

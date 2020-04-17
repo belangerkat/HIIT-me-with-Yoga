@@ -11,19 +11,19 @@ header {
     height: auto;
     cursor: pointer;
 }
-.flow-tables {
+.workout-tables {
     margin-bottom: 3.125em;
     text-align: center;
 }
-.flow-table {
+.workout-table {
     border: 1px solid #ddd;
     margin: 0 0.5em 2em;
     padding: 0 0 3em;
 }
-.flow-table-poses {
+.workout-table-exercises {
     background: #e0e9e0;
 }
-.flow-table-data {
+.workout-table-data {
     background: #ced8eb;
 }
 h1 {
@@ -39,7 +39,7 @@ h1 {
         font-weight: normal; */
 
     }
-    .pose-cards, flow-ul {
+    .exercise-cards, workout-ul {
         display: inline;
         margin: 0;
     }

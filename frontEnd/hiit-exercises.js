@@ -1,23 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('%c DOM Content Loaded and Parsed!', 'color: magenta')
-    fetch("http://localhost:3000/exercises")
-    .then(response => response.json())
-    .then(result => renderExercises(result))
+    
+    fetch(`http://localhost:3000/users/${localStorage.id}`, {
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${localStorage.token}`
+        }
+    }).then(response => response.json())
+    .then(result => renderWorkouts(result))
 
-    function renderExercises(exercises) {
-        const exerciseCards = document.createElement('ul')
-        exerciseCards.className = 'exercise-cards'
-        exercises.forEach(exercise => {
-            const exerciseCard = document.createElement('li')
-            exerciseCard.className = 'card'
-            const image = document.createElement('img')
-            image.className = 'exercise-image'
-            const name = document.createElement('div')
-            name.innerText = exercise.name
-            image.src = exercise.image
-            exerciseCard.append(image, name)
-            exerciseCards.appendChild(exerciseCard)
+    function renderWorkouts(user) {
+        const banner = document.querySelector('.banner')
+        console.log(user)
+        let workoutArray = user.hiit_workouts
+        console.log(workoutArray)
+        workoutArray.forEach(workout => {
+            console.log(workout)
+            const userWorkout = document.querySelector('.banner-head')
+            
+            const workoutName = document.createElement('h1')
+            workoutName.innerHTML = `<a href='workout.html?id=${workout.id}'>${workout.name}</a>`
+            userWorkout.appendChild(workoutName)
         })
-        document.body.appendChild(exerciseCards)
     }
 })
