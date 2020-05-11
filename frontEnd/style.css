@@ -75,49 +75,51 @@ header {
 }
 .workout-options{
     /* position: absolute; */
-    display: inline-block; Make the width of box same as image
+    display: flex;
 }
 
 .yoga, .hiit {
     font-size: 6rem;
-    font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
+    font-family: sans-serif;
     letter-spacing: 0.15em;
     color: white;
-    position: absolute;
-    /* z-index: 1; */
-    /* text-align: center; */
-    /* background: transparent;
-    padding: inherit;
-    width: 50%; */
-    /* margin: 200px;
-} */
-/* .hiit {
-    position: absolute;
-    z-index: 999;
+    /* position: absolute; */
     margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 50%; /* Adjust this value to move the positioned div up and down */
     text-align: center;
-    width: 10%; /* Set the width of the positioned div */
     background-color: transparent;
-} */
+    text-decoration: none;
+    /* text-shadow: 2px 2px rgb(78, 77, 77); */
+    font-weight: 800;
+    
+} 
+.hiit-container {
+    background-image: url(https://lmimirror3pvr.azureedge.net/static/media/12419/f550bcca-c76d-420c-999f-d6ba1fa41b46/hiit_960x540-v2.jpg);
+    width: 718px;
+    height: 450px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.yoga-container {
+    background-image: url(https://specials-images.forbesimg.com/imageserve/1067864612/960x0.jpg?fit=scale);
+    width: 718px;
+    height: 450px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
 button {
     background: transparent;
     font-family: sans-serif;
 
 }
-img {
-    width: 718px;
-    height: 450px;
-    display: flex;
-}
-.workout-options div {
+
+/* .workout-options div {
     display: inline-block;
     /* margin-left: px;
     margin-top: 0px; */
     /* align-items: center; */
-}
+} */
 
 /* body{
     background-color:rgba(160, 57, 57, 0.849);
